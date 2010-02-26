@@ -1,6 +1,8 @@
 #labels Featured
 = Freud test examples =
 
+Below are classes with example Analysis objects.
+
 == Java Class ==
 [https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/aclass/ClassExamples.java ClassExamples.java]
 

@@ -1,0 +1,20 @@
+#labels Featured
+= Freud test examples =
+
+== Java Class ==
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/aclass/ClassExamples.java ClassExamples.java]
+
+== Java Source ==
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/javasource/JavaSourceExamples.java JavaSourceExamples.java]
+
+== Spring ==
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/spring/SpringExamples.java SpringExamples.java]
+
+== CSS ==
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/css/CssExamples.java CssExamples.java]
+
+== Properties ==
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/properties/PropertiesExamples.java PropertiesExamples.java]
+
+== Text ==
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/text/TextExamples.java TextExamples.java]

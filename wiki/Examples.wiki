@@ -1,9 +1,9 @@
 #labels Featured
 = Freud test examples =
 
-Below are static classes that create example analysis tests = *Analysis* object instances.
+Below are static classes that create example analysis tests [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/Analysis.java Analysis] object instances.
 
-Each *Analysis* object is constructed by passing it an *AnalysedObjectIterator* - The entities to be analysed.
+Each *Analysis* object is constructed by passing it an [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/util/collection/AnalysedObjectIterator.java AnalysedObjectIterator] - The entities to be analysed.
 
 The actual test is performed by calling the Analysis interface's only method:
 

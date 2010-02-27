@@ -1,22 +1,30 @@
 #labels Featured
 = Freud test examples =
 
-Below are classes with example Analysis objects.
+Below are static classes that create example analysis tests = *Analysis* object instances.
+
+Each *Analysis* object is constructed by passing it an *AnalysedObjectIterator* - The entities to be analysed.
+
+The actual test is performed by calling the Analysis interface's only method:
+
+`void analyse(AnalysisListener listener);`
+
+All examples are tested using various analysed objects in tests under same package.
 
 == Java Class ==
-[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/aclass/ClassExamples.java ClassExamples.java]
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/aclass/ClassExamples.java]
 
 == Java Source ==
-[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/javasource/JavaSourceExamples.java JavaSourceExamples.java]
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/javasource/JavaSourceExamples.java]
 
 == Spring ==
-[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/spring/SpringExamples.java SpringExamples.java]
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/spring/SpringExamples.java]
 
 == CSS ==
-[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/css/CssExamples.java CssExamples.java]
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/css/CssExamples.java]
 
 == Properties ==
-[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/properties/PropertiesExamples.java PropertiesExamples.java]
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/properties/PropertiesExamples.java]
 
 == Text ==
-[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/text/TextExamples.java TextExamples.java]
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/text/TextExamples.java]

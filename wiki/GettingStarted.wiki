@@ -1,4 +1,4 @@
-#Getting Started with Freud
+=Getting Started with Freud=
 
 Every Freud test is built out of two components.
 
@@ -9,7 +9,9 @@ For example, if we want to check wether a collection of java classes is a sub ty
 ClassAnalysis is our best option, since it implements the [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/aclass/ClassDsl.java ClassDsl] interface.
 This is a DSL with assertions about classes and unsurprisingly, it contains a method  
 
-`BooleanOperatorDsl<ClassAnalysisBuilder> subTypeOf(Class type);` that we can use.
+`BooleanOperatorDsl<ClassAnalysisBuilder> subTypeOf(Class type);` 
+
+that we can use.
 
 The iterator is the collection of classes to analyse.
 This may be any implementation of [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/util/collection/AnalysedObjectIterator.java AnalysedObjectIterator] but the implementations that come with Freud should be good enough for most cases.

@@ -1,0 +1,5 @@
+#Getting Started with Freud
+
+Every Freud test is built out of two components.
+
+An Analysis object and an Iterator.

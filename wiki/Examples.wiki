@@ -1,8 +1,11 @@
 #labels Featured
 = Freud test examples =
 
-== Java Class ==
-[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/aclass/ClassExamples.java]
+== Java Class Object ==
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/classobject/ClassExamples.java]
+
+== Java Class Files ==
+[https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/classfile/ClassFilesExamples.java]
 
 == Java Source ==
 [https://code.google.com/p/freud/source/browse/trunk/src/test/org/langera/examples/javasource/JavaSourceExamples.java]

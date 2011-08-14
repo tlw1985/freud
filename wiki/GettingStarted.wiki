@@ -38,7 +38,7 @@ The iterator can be created in several ways depending on what the content is and
 
 Supplying an iterator means you need to access the text (in this case) and "parse" it into `TextLine` objects. But Freud gives you also "parsers" to all its supported content types and an easy way to define iterators which should make it trivial in all common cases.
 
-oner important aspect is the ability to convert from one content type 
+Another important aspect is the ability to convert from one content type 
 to another. `TextLine.java` can be derived from Text.java and so we can also define an iterator of Text objects (which is a wrapper on a byte array really) and write:
 
 {{{

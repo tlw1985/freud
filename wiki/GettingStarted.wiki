@@ -10,11 +10,51 @@ Lets write a test to check that the length of a line in a text is not more than 
 In Freud it will look like this:
 
 {{{
-Freud.iterateOver(TextLine.class).within(iterator).
+Freud.iterateOver(TextLine.class).in(iterator).
                 assertThat(lineLength().lessThanOrEqualTo(80));
 }}}
 
 We will iterate over TextLine objects and assert their length.
+
+
+{{{
+Freud.iterateOver(TextLine.class)
+}}}
+
+describes... well... the object you going to iterate over obviously. 
+
+{{{
+  ... .in(iterator)
+}}}
+
+is how you supply the iterator for that object. In our example,
+
+iterator must be of type java.util.Iterator<TextLine> 
+
+The iterator can be created in several ways depending on what the content is and how can we access it.
+
+Supplying an iterator means you need to access the text (in this case) and "parse" it into TextLine objects. But Freud gives you also "parsers" to all its supported content types and an easy way to define iterators which should make it trivial in all common cases.
+
+oner important aspect is the ability to convert from one content type 
+to another. `TextLine.java` can be derived from Text.java and so we can also define an iterator of Text objects (which is a wrapper on a byte array really) and write:
+
+{{{
+Freud.iterateOver(TextLine.class).within(iterator, Text.class).
+}}} 
+
+with an iterator of type java.util.Iterator<Text>.
+
+
+The third option is to construct a Freud specific implementation of iterator called [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/core/iterator/AnalysedObjectIterator.java AnalysedObjectIterator]
+
+and then assuming iterator is of type AnalysedObjectIterator<Text> 
+you can write:
+
+{{{
+Freud.iterateOver(TextLine.class).within(iterator).
+}}}
+
+After the iterator, comes the assertion:
 
 {{{
 lineLength().lessThanOrEqualTo(80) 
@@ -23,8 +63,7 @@ lineLength().lessThanOrEqualTo(80)
 is a hamcrest matcher which describes the assertion on the TextLine object.
 
 The iterator implementation defines how to get the content (text in this case) and parse it into TextLine objects.
- 
-The iterator can be created in several ways depending on what the text content is and how can we access it.
+
 
 
 

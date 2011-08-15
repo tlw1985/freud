@@ -101,6 +101,9 @@ Freud.iterateOver(ClassFileMethod.class).within(iterator).
                 assertThat(no(hasMethodInvocation(BigDecimal.class, "equals", Object.class)));
 
 }}}
+
+   We found this extremely important. There is nothing wrong with the `BigDecimal` equals method. In some contexts it is what you want to call - but if you don't care about full equality of the object (ie. same scale etc.) and just wants to see whether the numeric value it represents is the same - equals is bad and you should use `compareTo`.
+
  
 This example uses an object called `ClassFileMethod` - which is derived from an iterator of `ClassFile` objects.
 

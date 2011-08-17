@@ -25,5 +25,5 @@
 
 == Spring xml configuration ==
 
-     * spring-2.5.4.jar (probably works with most spring versions)
+     * spring-2.5.4.jar (probably works with most / all spring versions)
      * commons-logging-1.1.jar

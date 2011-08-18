@@ -71,7 +71,8 @@ The iterator can be created in several ways depending on what the content is and
 Supplying an iterator means you need to access the text (in this case) and "parse" it into `TextLine` objects. But Freud gives you also "parsers" to all its supported content types and an easy way to define iterators which should make it trivial in all common cases.
 
 Another important aspect is the ability to convert from one content type 
-to another. `TextLine.java` can be derived from Text.java and so we can also define an iterator of Text objects (which is a wrapper on a byte array really) and write:
+to another. http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/optional/text/textline/TextLine.java TextLine] objects can be derived from 
+[http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/optional/text/Text.java Text] objects and so we can also define an iterator of Text objects (which is really just a wrapper on a byte array) and write:
 
 {{{
 Freud.iterateOver(TextLine.class).within(iterator, Text.class).
@@ -96,6 +97,8 @@ lineLength().lessThanOrEqualTo(80)
 }}}
 
 is a hamcrest matcher which describes the assertion on the `TextLine` object.
+
+Every content type has a DSL class with static methods that define common matchers for that content type.
 
 Another option is to define a custom assertion. This is simply done as:
 

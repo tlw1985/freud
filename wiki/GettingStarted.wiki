@@ -1,12 +1,27 @@
 #labels Featured
 =Getting Started with Freud=
 
-Freud tests are built from an *iterator* of the content to test, and *assertions* on that content.
-The results are returned via a *listener*.
+Freud static analysis is done by building a 
+[http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/core/FreudAnalyser.java FreudAnalyser] class.
 
-For example.
+We build it by specifying the rule we want to assert on the content 
+in a "declarative" way.
 
-Lets write a test to check that the length of a line in a text is not more than 80.
+Running the FreudAnalyser is done by calling its single method:
+
+{{{
+
+void analyse(AnalysisListener listener);
+
+}}}
+
+The results are returned via an [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/core/listener/AnalysisListener.java AnalysisListener].
+
+When building the FreudAnalyser we pass in an *iterator* of the content to analyse, and *assertions* on that content.
+
+For example:
+
+Lets create a simple analysis check that asserts that the length of a line in a text is not more than 80.
 
 In Freud it will look like this:
 
@@ -17,6 +32,24 @@ Freud.iterateOver(TextLine.class).in(iterator).
 
 We will iterate over `TextLine` objects and assert their length.
 
+And to run it we will write:
+
+{{{
+
+final FreudAnalyser freudAnalyser =      
+             Freud.iterateOver(TextLine.class).in(iterator).
+                     assertThat(lineLength().lessThanOrEqualTo(80));
+freudAnalyser.analyse(listener);
+
+}}} 
+
+*listener" can be any class that implements [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/core/listener/AnalysisListener.java AnalysisListener].
+
+A few common implementations (like one that will throw org.junit.AssertionError or one that prints the results to System.out 
+are provided with Freud).
+
+
+Let's dive into the details of this example:
 
 {{{
 Freud.iterateOver(TextLine.class)

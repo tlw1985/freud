@@ -15,7 +15,7 @@ void analyse(AnalysisListener listener);
 
 }}}
 
-The results are returned via an [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/core/listener/AnalysisListener.java AnalysisListener].
+The [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/core/listener/AnalysisListener.java AnalysisListener] should define what to do with the results.
 
 When building the  `FreudAnalyser ` we pass in an *iterator* of the content to analyse, and *assertions* on that content.
 

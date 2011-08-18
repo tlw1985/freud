@@ -7,7 +7,7 @@ Freud static analysis is done by building a
 We build it by specifying the rule we want to assert on the content 
 in a "declarative" way.
 
-Running the FreudAnalyser is done by calling its single method:
+Running the  `FreudAnalyser ` is done by calling its single method:
 
 {{{
 
@@ -17,7 +17,7 @@ void analyse(AnalysisListener listener);
 
 The results are returned via an [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/core/listener/AnalysisListener.java AnalysisListener].
 
-When building the FreudAnalyser we pass in an *iterator* of the content to analyse, and *assertions* on that content.
+When building the  `FreudAnalyser ` we pass in an *iterator* of the content to analyse, and *assertions* on that content.
 
 For example:
 
@@ -45,7 +45,7 @@ freudAnalyser.analyse(listener);
 
 *listener" can be any class that implements [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/core/listener/AnalysisListener.java AnalysisListener].
 
-A few common implementations (like one that will throw org.junit.AssertionError or one that prints the results to System.out 
+A few common implementations (like one that will throw  `org.junit.AssertionError` or one that prints the results to  `System.out` 
 are provided with Freud).
 
 

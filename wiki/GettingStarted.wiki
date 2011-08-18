@@ -54,7 +54,7 @@ Its time to dive into the details of this example:
 Freud.iterateOver(TextLine.class)
 }}}
 
-describes... well... the object you going to iterate over obviously. 
+describes... well... the object you are going to iterate over obviously. 
 
 {{{
   ... .in(iterator)

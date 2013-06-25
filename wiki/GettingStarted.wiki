@@ -1,5 +1,11 @@
 #labels Featured
-=Getting Started with Freud=
+=Freud has moved to Github=
+
+*This version is old and is not actively maintained*
+
+*see: https://github.com/LMAX-Exchange/freud *
+
+==Getting Started with Freud==
 
 Freud static analysis is done by building a 
 [http://code.google.com/p/freud/source/browse/trunk/src/main/org/langera/freud/core/FreudAnalyser.java FreudAnalyser] class.
